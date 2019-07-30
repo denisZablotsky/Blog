@@ -1,3 +1,15 @@
-<h3 class="title">Hello, Ruby on Rails</h3>
+<section class="section">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="card">
+        <div class="card-header-title">
+          <%= link_to post.title, post %>
+        </div>
 
-<%= @posts.count %>
+        <div class="card-content">
+          <%= post.content %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
