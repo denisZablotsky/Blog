@@ -1,4 +1,4 @@
-class CommentsConroller < ApplicationController
+class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
@@ -8,6 +8,6 @@ class CommentsConroller < ApplicationController
   private
 
   def comment_params
-    prarms.require(:comment).permit(:content)
+    params.require(:comment).permit(:content)
   end
 end
