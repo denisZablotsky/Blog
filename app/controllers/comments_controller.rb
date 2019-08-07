@@ -1,0 +1,3 @@
+class CommentsConroller < ApplicationController
+
+end
